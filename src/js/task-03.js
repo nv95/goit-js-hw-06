@@ -15,19 +15,19 @@ const images = [
 
 const galerryRef = document.querySelector(".gallery");
 
-// const newImagesRef = images
-//   .map(
-//     (image) =>
-//       `<li> <img src ='${image.url}' alt ='${image.alt}' width=400 > </img>  </li>`
-//   )
-//   .join("");
+const newImagesRef = images
+  .map(
+    (image) =>
+      `<li class="gallery__list-item"> <img src ='${image.url}' alt ='${image.alt}' class = "gallery__img-item " width=400 > </img>  </li>`
+  )
+  .join("");
 
-// galerryRef.insertAdjacentHTML("afterbegin", newImagesRef);
+galerryRef.insertAdjacentHTML("afterbegin", newImagesRef);
 
-const newImagesRef = images.map((image) => {
-  let newElref = galerryRef.insertAdjacentHTML(
-    "afterbegin",
-    `<li> <img src ='${image.url}' alt ='${image.alt}' width=400 > </img>  </li>`
-  );
-  return newElref;
-});
+// const newImagesRef = images.map((image) => {
+//   let newElref = galerryRef.insertAdjacentHTML(
+//     "afterbegin",
+//     `<li> <img src ='${image.url}' alt ='${image.alt}' width=400 > </img>  </li>`
+//   );
+//   return newElref;
+// });

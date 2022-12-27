@@ -5,16 +5,18 @@ function getRandomHexColor() {
 }
 
 const backgroundColorRef = document.querySelector("body");
-console.log("🚀 ~ file: task-09.js:6 ~ backgroundColorRef", backgroundColorRef);
+console.log(backgroundColorRef);
 
 const textRef = document.querySelector(".color");
-console.log("🚀 ~ file: task-09.js:8 ~ textRef", textRef);
+console.log(textRef);
 
 const changeColorBtnRef = document.querySelector(".change-color");
-console.log("🚀 ~ file: task-09.js:12 ~ changeColorBtnRef", changeColorBtnRef);
+console.log(changeColorBtnRef);
 
-changeColorBtnRef.addEventListener("click", () => {
-  console.log("click");
-  backgroundColorRef.style.backgroundColor = getRandomHexColor();
-  textRef.textContent = getRandomHexColor();
-});
+changeColorBtnRef.addEventListener("click", onChangeColor);
+
+function onChangeColor() {
+  const randomColor = getRandomHexColor();
+  backgroundColorRef.style.backgroundColor = randomColor;
+  textRef.textContent = randomColor;
+}
